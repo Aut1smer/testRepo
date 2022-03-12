@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            height: 100%;
+            font-size: 0;
+        }
+
+        body {
+            /* position: relative; */
+            /* display: flex; */
+            /* display: inline-block; */
+
+            height: 100%;
+        }
+
+        aside {
+            font-size: normal;
+            display: inline-block;
+            /* display: inline; */
+            width: 150px;
+            height: 100%;
+            background-color: aqua;
+            /* float: left; */
+        }
+
+        main {
+            font-size: normal;
+            /* display: flow-root; */
+            display: inline-block;
+            /* width: calc(100% - 150px); */
+            /* width: calc(100vw - 180px); */
+            height: 100%;
+            /* position: absolute; */
+            /* top: 0; */
+            /* left: 150px; */
+            /* flex: 1; */
+            background-color: violet;
+        }
+    </style>
+</head>
+
+<body>
+    <aside>left</aside>
+    <main>right</main>
+</body>
+
+</html>

@@ -1,23 +1,25 @@
-import logo from './logo.svg';
 import './App.css';
-
+import { Routes, Route, NavLink } from 'react-router-dom'
+import Main from './Main'
+import Mine from './Mine'
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <nav>nav</nav>
+      <main>
+        <Routes>
+          <Route path='/' element={<Main />}></Route>
+          <Route path='/mine' element={<Mine />}></Route>
+        </Routes>
+      </main>
+      <footer className="toolbar">
+        <NavLink to='/' className={({ isActive }) => {
+          return isActive ? 'selectedBtn' : null
+        }}>主页</NavLink>
+        <NavLink to='/mine' className={({ isActive }) => {
+          return isActive ? 'selectedBtn' : null
+        }}>我的</NavLink>
+      </footer>
     </div>
   );
 }
